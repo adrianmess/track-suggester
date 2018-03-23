@@ -1,12 +1,13 @@
 
 // 1 = JavaScript
 // 2 = Python
-// 3 = Ruby
+// 3 = c#
 // 4 = Swift  (iOS)
 // 5 = Java (Android)
 // 6 = HTML5 (Web Design - how things look)
 // 7 = 1. JavaScript  2. HTML5  [UX: How to interact with things]
-// 8 = Python - Ruby - PHP Code = Logic
+// 8 = Java + C# + Swift
+// 9 = C++
 //--------------OS ---------------------------
 // Windows = C#
 
@@ -17,7 +18,7 @@
 // iOS = Swift
 // Android = Java
 //-------------why learn---------------------------------
-// Build something fun = HTML 5 + Java + C# + Swift
+// Build something fun = Java + C# + Swift
 //start-up = JavaScript
 //something fun = HTML 5
 //another skill = HTML 5
@@ -34,5 +35,20 @@
 // small business = PHP
 // startup = JavaScript
 // Enterprise = Java
+require.config({
+  paths: {
+    mathjs: 'js/',
+  }
+});
 $(document).ready(function()
-{    $("#results").click(function() {
+{    $("#results").click(function mode(arr) {
+
+      return arr.sort((a,b) =>
+            arr.filter(v => v===a).length
+          - arr.filter(v => v===b).length
+      ).pop();
+  });
+
+  math.mode(['pear', 'apple', 'orange', 'apple']); // apple
+
+});
