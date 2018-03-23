@@ -1,0 +1,11 @@
+.jumbotron {
+  text-align: center;
+}
+
+.margin-left {
+  margin-left: 20px !important;
+}
+
+input {
+  margin: 20px;
+}
