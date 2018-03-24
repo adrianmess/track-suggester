@@ -1,13 +1,27 @@
 
-// 1 = JavaScript
-// 2 = Python
-// 3 = c#
-// 4 = Swift  (iOS)
+$(document).ready(function()
+{
+  var os = $("#operatingSystem").val();
+  console.log(os)
+//   $("#results").click(function () {
+//
+// }
+});
+
+
+
+
+
+
+//+ 1 = JavaScript
+//+ 200 2 = Python
+//+ 20 = c#
+//+ 1000 4 = Swift  (iOS)
 // 5 = Java (Android)
-// 6 = HTML5 (Web Design - how things look)
+//20000 6 = HTML5 (Web Design - how things look)
 // 7 = 1. JavaScript  2. HTML5  [UX: How to interact with things]
-// 8 = Java + C# + Swift
-// 9 = C++
+// 20000000 = Java + C# + Swift
+//+ 1000000= C++
 //--------------OS ---------------------------
 // Windows = C#
 
@@ -35,20 +49,3 @@
 // small business = PHP
 // startup = JavaScript
 // Enterprise = Java
-require.config({
-  paths: {
-    mathjs: 'js/',
-  }
-});
-$(document).ready(function()
-{    $("#results").click(function mode(arr) {
-
-      return arr.sort((a,b) =>
-            arr.filter(v => v===a).length
-          - arr.filter(v => v===b).length
-      ).pop();
-  });
-
-  math.mode(['pear', 'apple', 'orange', 'apple']); // apple
-
-});
