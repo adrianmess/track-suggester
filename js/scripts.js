@@ -10,11 +10,21 @@ $("button#getStarted").click(function() {
 });
 });
 
+//next buttons will hide question, show next question, and show new next button for new question. repeats until no more questions. 
 $(function() {
   $("input").click(function(){
-    $("button#next").fadeIn();
+    $("button#nextPhoneOS").fadeIn();
+    $("button#nextPhoneOS").click(function(){
+      $(".panel-body#operatingSystem").fadeOut();
+      $(".panel-body#phoneOS").fadeIn();
+    });
   });
 });
+
+// var osValue = $(function(){
+//   $(input.value)
+//
+// };
 
 
 //+ 1 = JavaScript

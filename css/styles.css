@@ -10,10 +10,10 @@ input {
   margin: 20px;
 }
 
-.panel-body#operatingSystem {
+.panel-body#operatingSystem, .panel-body#phoneOS {
   display: none;
 }
 
-button#next {
+button#nextPhoneOS, button#nextWhyCode, button#nextDeveloperType, button#nextMoreInteresting, button#nextwhatCompany{
   display: none;
 }
