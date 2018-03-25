@@ -10,6 +10,11 @@ $("button#getStarted").click(function() {
 });
 });
 
+$(function() {
+  $("input").click(function(){
+    $("button#next").fadeIn();
+  });
+});
 
 
 //+ 1 = JavaScript

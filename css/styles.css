@@ -13,3 +13,7 @@ input {
 .panel-body#operatingSystem {
   display: none;
 }
+
+button#next {
+  display: none;
+}
