@@ -1,15 +1,14 @@
 
-$(document).ready(function()
-{
-  var os = $("#operatingSystem").val();
-  console.log(os)
-//   $("#results").click(function () {
-//
-// }
+
+//   alert("jQuery is working");
+// })
+
+$(function(){
+$("button#getStarted").click(function() {
+  $(".panel-body#operatingSystem").slideDown();
+
 });
-
-
-
+});
 
 
 
