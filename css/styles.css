@@ -10,10 +10,14 @@ input {
   margin: 20px;
 }
 
-.panel-body#operatingSystem, .panel-body#phoneOS {
+.panel-body#operatingSystem, .panel-body#phoneOS, .panel-body#whyCode, .panel-body#developerType, .panel-body#moreInteresting, .panel-body#whatCompany {
   display: none;
 }
 
-button#nextPhoneOS, button#nextWhyCode, button#nextDeveloperType, button#nextMoreInteresting, button#nextwhatCompany{
+button#nextPhoneOS, button#nextWhyCode, button#nextDeveloperType, button#nextMoreInteresting, button#nextWhatCompany, button#submit{
   display: none;
 }
+
+/* button#next{
+  display: none;
+} */ */
