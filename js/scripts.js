@@ -91,20 +91,21 @@ $(function() {
                         var number5 =  parseInt(number5)
                         var total = number1 + number2 + number3 + number4 + number5;
                          if  (total > 1 && total < 21 ) {
-                           $("div#language").html("JavaScript");
+                           $("span#language").html("JavaScript");
                          } else if (total > 20 && total < 199 ) {
-                           $("div#language").html("C#");
+                           $("span#language").html("C#");
                          } else if (total > 200 && total <999 ) {
-                              $("div#language").html("Python");
+                              $("span#language").html("Python");
                             } else if (total > 20000 && total < 500000 ) {
-                               $("div#language").html("Swift");
+                               $("span#language").html("Swift");
                              } else if (total > 1000001 && total < 19000000 ) {
-                                 $("div#language").html("C++");
+                                 $("span#language").html("C++");
                                } else if (total > 20000000) {
                                    $("span#language").html("Java");
 
-                                 }
-                                // $("span#language").fadeIn();
+                                 }$("h1").fadeIn();
+                                   $("span#language").fadeIn();
+
                       });
                     });
                   });

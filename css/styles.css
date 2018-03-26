@@ -28,17 +28,24 @@ text-align: center;
 text-align: center;
 }
 
-span {
+span  {
+  display: none;
+}
+
+h1 {
+
+  font-weight: bold;
+  font-family: fantasy;
+  font-size: 20;
+    margin-left: 20%;
+    margin-right: 20%;
+  text-align: center;
+  color: black;
   display: none;
 }
 
 }
-span#language  {
-  font-weight: bold;
-  font-family: fantasy;
-  font-size: 20;
-    margin-left: 40%;
-  text-align: center;
-  color: black;
-  display:none;
+span#language {
+
+
 }
