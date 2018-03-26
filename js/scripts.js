@@ -3,16 +3,31 @@
 //   alert("jQuery is working");
 // })
 
-$(function(){
-$("button#getStarted").click(function() {
-  $(".panel-body#operatingSystem").slideDown();
-  $("button#getStarted").fadeOut();
-  });
-});
+// $(function(){
+// $("button#getStarted").click(function() {
+//   $(".panel-body#operatingSystem").slideDown();
+//   $("button#getStarted").fadeOut();
+//   });
+// });
 
 //next buttons will hide question, show next question, and show new next button for new question. repeats until no more questions.
+
+// var x = document.getElementById("")
+// var radioBtValue= $('input[type=radio][name=optradio]:checked').val();
+// var input = $( "div label input:radio" )
+
+
 $(function() {
+
+  $("button#getStarted").click(function() {
+    $(".panel-body#operatingSystem").slideDown();
+    $("button#getStarted").fadeOut();
   $(".panel-body#operatingSystem, .input").click(function(){
+    // alert ($('input[name=optradio]:checked', '#operatingSystem').val());
+   var numbers = $('input[name=optradio]:checked', '#operatingSystem').val()
+   $(".output").append(numbers)
+
+
     $("button#nextPhoneOS").fadeIn();
     $("button#nextPhoneOS").click(function(){
       $(".panel-body#operatingSystem").fadeOut();
@@ -37,14 +52,22 @@ $(function() {
             $("button#submit").click(function(){
               $(".panel-body#whatCompany").fadeOut();
               $("button#submit").fadeOut();
+
+
             });
           });
-
         });
       });
     });
   });
 });
+
+});
+
+
+// var inputV = $("input radio").val();
+// var. x = $("input").val();
+// var input = $( "input:radio" ).val();
 
 // var osValue = $(function(){
 //   $(input.value)
