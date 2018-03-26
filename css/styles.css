@@ -18,10 +18,6 @@ button#nextPhoneOS, button#nextWhyCode, button#nextDeveloperType, button#nextMor
   display: none;
 }
 
-.output {
+span {
   display: none;
 }
-
-/* button#next{
-  display: none;
-} */ */

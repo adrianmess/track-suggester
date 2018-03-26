@@ -1,80 +1,4 @@
 
-
-//   alert("jQuery is working");
-// })
-
-// $(function(){
-// $("button#getStarted").click(function() {
-//   $(".panel-body#operatingSystem").slideDown();
-//   $("button#getStarted").fadeOut();
-//   });
-// });
-
-//next buttons will hide question, show next question, and show new next button for new question. repeats until no more questions.
-
-// var x = document.getElementById("")
-// var radioBtValue= $('input[type=radio][name=optradio]:checked').val();
-// var input = $( "div label input:radio" )
-
-
-$(function() {
-
-  $("button#getStarted").click(function() {
-    $(".panel-body#operatingSystem").slideDown();
-    $("button#getStarted").fadeOut();
-  $(".panel-body#operatingSystem, .input").click(function(){
-    // alert ($('input[name=optradio]:checked', '#operatingSystem').val());
-   var numbers = $('input[name=optradio]:checked', '#operatingSystem').val()
-   $(".output").append(numbers)
-
-
-    $("button#nextPhoneOS").fadeIn();
-    $("button#nextPhoneOS").click(function(){
-      $(".panel-body#operatingSystem").fadeOut();
-      $(".panel-body#phoneOS").fadeIn();
-      $("button#nextPhoneOS").fadeOut();
-      $("button#nextWhyCode").fadeIn();
-      $("button#nextWhyCode").click(function() {
-        $("button#nextWhyCode").fadeOut();
-        $(".panel-body#phoneOS").fadeOut();
-        $(".panel-body#whyCode").fadeIn();
-        $("button#nextDeveloperType").fadeIn();
-        $("button#nextDeveloperType").click(function(){
-          $(".panel-body#whyCode").fadeOut();
-          $("button#nextDeveloperType").fadeOut();
-          $("button#nextMoreInteresting").fadeIn();
-          $(".panel-body#moreInteresting").fadeIn();
-          $("button#nextMoreInteresting").click(function(){
-            $(".panel-body#moreInteresting").fadeOut();
-            $("button#nextMoreInteresting").fadeOut();
-            $(".panel-body#whatCompany").fadeIn();
-            $("button#submit").fadeIn();
-            $("button#submit").click(function(){
-              $(".panel-body#whatCompany").fadeOut();
-              $("button#submit").fadeOut();
-
-
-            });
-          });
-        });
-      });
-    });
-  });
-});
-
-});
-
-
-// var inputV = $("input radio").val();
-// var. x = $("input").val();
-// var input = $( "input:radio" ).val();
-
-// var osValue = $(function(){
-//   $(input.value)
-//
-// };
-
-
 //+ 1 = JavaScript
 //+ 200 2 = Python
 //+ 20 = c#
@@ -111,3 +35,59 @@ $(function() {
 // small business = PHP
 // startup = JavaScript
 // Enterprise = Java
+
+$(function() {
+  $("button#getStarted").click(function() {
+    $(".panel-body#operatingSystem").slideDown();
+    $("button#getStarted").fadeOut();
+    $("button#nextPhoneOS").fadeIn();
+    $(".panel-body#operatingSystem, input").click(function(){
+      var operatingSystem = $('label input[name=optradio]:checked', '#operatingSystem').val();
+      $("span#sOperatingSys").html(operatingSystem);
+      $("button#nextPhoneOS").click(function(){
+        $(".panel-body#operatingSystem").fadeOut();
+        $("button#nextPhoneOS").fadeOut();
+        $(".panel-body#phoneOS").fadeIn();
+        $("button#nextWhyCode").fadeIn();
+        $(".panel-body#phoneOS, input").click(function(){
+          var phoneOS = $('input[name=optradio]:checked', '#phoneOS').val();
+          $("span#sPhoneOS").html(phoneOS);
+          $("button#nextWhyCode").click(function() {
+            $(".panel-body#phoneOS").fadeOut();
+            $("button#nextWhyCode").fadeOut();
+            $(".panel-body#whyCode").fadeIn();
+            $("button#nextDeveloperType").fadeIn();
+            $(".panel-body#whyCode, input").click(function(){
+              var whyCode = $('input[name=optradio]:checked', '#whyCode').val();
+              $("span#sWhyCode").html(whyCode);
+              $("button#nextDeveloperType").click(function(){
+                $(".panel-body#whyCode").fadeOut();
+                $("button#nextDeveloperType").fadeOut();
+                $("button#nextMoreInteresting").fadeIn();
+                $(".panel-body#moreInteresting").fadeIn();
+                $(".panel-body#moreInteresting, .input").click(function(){
+                  var moreInteresting = $('input[name=optradio]:checked', '#moreInteresting').val();
+                  $("span#sDeveloperType").html(moreInteresting);
+                  $("button#nextMoreInteresting").click(function(){
+                    $(".panel-body#moreInteresting").fadeOut();
+                    $("button#nextMoreInteresting").fadeOut();
+                    $(".panel-body#whatCompany").fadeIn();
+                    $(".panel-body#whatCompany, .input").click(function(){
+                      var whatCompany = $('input[name=optradio]:checked', '#whatCompany').val()
+                      $("span#smoreInteresting").html(whatCompany)
+                      $("button#submit").fadeIn();
+                      $("button#submit").click(function(){
+                        $(".panel-body#whatCompany").fadeOut();
+                        $("button#submit").fadeOut();
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+});
