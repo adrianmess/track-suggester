@@ -18,6 +18,27 @@ button#nextPhoneOS, button#nextWhyCode, button#nextDeveloperType, button#nextMor
   display: none;
 }
 
+button#getStarted {
+  margin-left: 40%;
+text-align: center;
+}
+
+.panel-body .btn-group .btn .radio{
+  margin-left: 40%;
+text-align: center;
+}
+
 span {
   display: none;
+}
+
+}
+span#language  {
+  font-weight: bold;
+  font-family: fantasy;
+  font-size: 20;
+    margin-left: 40%;
+  text-align: center;
+  color: black;
+  display:none;
 }
