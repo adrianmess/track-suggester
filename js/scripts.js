@@ -79,6 +79,30 @@ $(function() {
                       $("button#submit").click(function(){
                         $(".panel-body#whatCompany").fadeOut();
                         $("button#submit").fadeOut();
+                        var number1 = $("span#sOperatingSys").text();
+                        var number1 =  parseInt(number1)
+                        var number2 = $("span#sPhoneOS").text();
+                        var number2 =  parseInt(number2)
+                        var number3 = $("span#sWhyCode").text();
+                        var number3 =  parseInt(number3)
+                        var number4 = $("span#sDeveloperType").text();
+                        var number4 =  parseInt(number4)
+                        var number5 = $("span#smoreInteresting").text();
+                        var number5 =  parseInt(number5)
+                        var total = number1 + number2 + number3 + number4 + number5;
+                         if  (total > 1 && total < 21 ) {
+                           $("div#language").html("JavaScript");
+                         } else if (total > 20 && total < 199 ) {
+                           $("div#language").html("C#");
+                         } else if (total > 200 && total <999 ) {
+                              $("div#language").html("Python");
+                            } else if (total > 20000 && total < 500000 ) {
+                               $("div#language").html("Swift");
+                             } else if (total > 1000001 && total < 19000000 ) {
+                                 $("div#language").html("C++");
+                               } else if (total > 20000000) {
+                                   $("div#language").html("Java");
+                                 }
                       });
                     });
                   });
@@ -90,4 +114,4 @@ $(function() {
       });
     });
   });
-});
+  });
